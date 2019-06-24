@@ -1,9 +1,9 @@
 <div class="array">
 
-  <div class="item" *ngFor="let data of arrays; let i = index">
+  <div class="item" *ngFor="let data of arrays; let i = index;">
       
-    <div class="block1">
-      <div *ngIf=" toShortForm(data.time) !== jstoday && toShortForm(data.time) !== jsyesterday ">{{ data.time * 1000 | date:'d MMMM y' }}</div>
+    <div class="block1" *ngIf="i === 0 || (toShortForm(arrays[i].time) !== toShortForm(arrays[i-1].time)) ">
+      <div *ngIf=" toShortForm(data.time) !== jstoday && toShortForm(data.time) !== jsyesterday ">{{ data.time * 1000 | date:'d MMMM y' }} </div>
       <div *ngIf=" toShortForm(data.time) === jstoday ">Today</div>
       <div *ngIf=" toShortForm(data.time) === jsyesterday ">Yesterday</div>
     </div>
@@ -18,4 +18,4 @@
 
   </div>
 
-</div>
+</div> 

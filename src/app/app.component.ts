@@ -11,7 +11,7 @@ export class AppComponent {
     { name: 'Lorem ipsum dolor sit amet', time: 1561375013 },
     { name: 'Lorem ipsum dolor sit amet', time: 1561281014 },
     { name: 'Lorem ipsum dolor sit amet', time: 1561225618 },
-    { name: 'Lorem ipsum dolor sit amet', time: 1561078214 },
+    { name: 'Lorem ipsum dolor sit amet', time: 1561211018 },
     { name: 'Lorem ipsum dolor sit amet', time: 1560978214 },
     { name: 'Lorem ipsum dolor sit amet', time: 1560115625 },
     { name: 'Lorem ipsum dolor sit amet', time: 1559436419 }

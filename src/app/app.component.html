@@ -1,21 +1,11 @@
 <div class="array">
-
-  <div class="item" *ngFor="let data of arrays; let i = index;">
-      
-    <div class="block1" *ngIf="i === 0 || (toShortForm(arrays[i].time) !== toShortForm(arrays[i-1].time)) ">
-      <div *ngIf=" toShortForm(data.time) !== jstoday && toShortForm(data.time) !== jsyesterday ">{{ data.time * 1000 | date:'d MMMM y' }} </div>
-      <div *ngIf=" toShortForm(data.time) === jstoday ">Today</div>
-      <div *ngIf=" toShortForm(data.time) === jsyesterday ">Yesterday</div>
+  <div class="item" *ngFor="let data of arrays | transformation">     
+    <div class="day">
+      <div>{{ data[0] }}</div>
     </div>
-    <div class="block2">
-      <p class="event">
-        {{ data.name }}
-      </p>
-      <div class="time">
-        {{ data.time * 1000 | date:'h:mm a'}}
-      </div>
+    <div class="event" *ngFor="let list of data[1]">
+      <p class="infoText">{{ list.text }}</p>
+      <p class="time">{{ list.time }}</p>
     </div>
-
   </div>
-
 </div> 
